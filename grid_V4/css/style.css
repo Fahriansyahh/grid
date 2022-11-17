@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* pengunakan repeat */
+/* 
+.list {
+    list-style: none;
+    display: grid;
+    width: 80%;
+    margin: 50px auto;
+    grid-template-columns: repeat(9, 1fr) repeat(10, 2fr);
+} */
+/* auto fill dan fiit */
+/* 
+.list {
+    list-style: none;
+    display: grid;
+    width: 80%;
+    border: 1px solid lawngreen;
+    margin: 50px auto;
+    grid-template-columns: repeat(auto-fill, 100px);
+} */
+/* penulisan minmax */
+
+.list {
+    list-style: none;
+    display: grid;
+    width: 80%;
+    border: 1px solid lawngreen;
+    margin: 50px auto;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
+}
+
+
+.listnya {
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+}
+
+.listnya:nth-child(even) {
+    display: inline-block;
+    background-color: salmon;
+}

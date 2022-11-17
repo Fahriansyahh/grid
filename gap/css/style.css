@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* grid areas */
+
+.container {
+    margin: 100px 100px;
+    display: grid;
+    /* grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 50px; */
+    /* jadi membuat item seperti ini juga tidak sembarangan agar tidak ngebug
+    /* grid-template-areas:
+        'header header header header'
+        'main0 main0 main0 main0'
+        'main1 main2 main2 main2'
+        'main1 main2 main2 main2'
+        'main3 main3 main3 main3'; */
+    grid-template: 'header header header header' 100px'main0 main0 main0 main0' 150px 'main1 main2 main2 main2' 200px 'main3 main3 main3 main3' 100px /2fr 1fr 1fr 1fr;
+
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid black;
+
+}
+
+
+.item {
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.headernya {
+    grid-area: header;
+    background-color: salmon;
+}
+
+.main0nya {
+    grid-area: main0;
+    background-color: darkgrey;
+    overflow: auto;
+}
+
+.main0nya ul li {
+    list-style: none;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.main1nya {
+    grid-area: main1;
+    background-color: blue;
+}
+
+.main2nya {
+    grid-area: main2;
+    background-color: darkgrey;
+
+}
+
+.main3nya {
+    grid-area: main3;
+    background-color: red;
+    width: 100%;
+}
+
+/* column-gap
+row-gap
+gap */
+/* responssiiblity*/
+@media (max-width: 600px) {
+    .container {
+        /* grid-template-areas:
+            'header header header header'
+            'main0 main0 main0 main0'
+            'main1 main1 main1 main1'
+            'main2 main2 main2 main2'
+            'main3 main3 main3 main3'; */
+        grid-template: [header] 'header header header header' 50px [awal-main] 'main0 main0 main0 main0' 100px [main-satu] 'main1 main1 main1 main1' 80px[main-dua] 'main2 main2 main2 main2' 90px [man-ketiga]'main3 main3 main3 main3' 50px/1fr 1fr 1fr 1fr;
+        row-gap: 5px;
+    }
+
+}

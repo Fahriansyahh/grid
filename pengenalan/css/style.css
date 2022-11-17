@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* display: flex; */
+    display: grid;
+    grid-template-areas: "header header"
+        "aside1 nav"
+        "aside2 main"
+        "footer footer";
+    grid-auto-columns: 0.8fr 1.5fr;
+    grid-row-end: 1fr 0.7fr 1.5fr;
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    background-color: salmon;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* .container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+} */
+
+aside {
+    grid-area: aside1;
+    background-color: black;
+    line-height: 300px;
+    color: white;
+    /* float: left; */
+}
+
+aside h1 {
+    text-align: center;
+}
+
+.aside1 {
+    grid-area: aside2;
+    background-color: rgb(10, 10, 156);
+    display: grid;
+    grid-template-areas: "h1"
+        "h2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.5fr;
+}
+
+.aside1 h1 {
+    grid-area: h1;
+    border-bottom: 1px solid black;
+}
+
+.aside1 h2 {
+    grid: h2;
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(147, 113, 113);
+    line-height: 300px;
+    color: white;
+    /* float: left; */
+
+}
+
+nav h1 {
+    text-align: center;
+}
+
+main {
+    background-color: rgb(159, 132, 132);
+    line-height: 600px;
+    flex: 6;
+    grid-area: main;
+    display: flex;
+    /* float: right; */
+}
+
+main .h1 {
+    flex: 4;
+    text-align: center;
+    background-color: white;
+}
+
+main .list {
+    flex: 2;
+    display: inline-block;
+    background-color: orange;
+    padding: 0px;
+}
+
+main .list ul li {
+    text-align: center;
+    list-style: none;
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    line-height: 80px;
+    background-color: blue;
+}
+
+footer h1 {
+    text-align: center;
+}
